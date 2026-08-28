@@ -1,0 +1,834 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>BOOKSTORE</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/common.css" />
+
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body>
+    <!-- =========================
+       1. 상단 이벤트 띠배너
+  ========================== -->
+
+    <div class="top-banner">
+      <p>
+        무엇이든 해내는 주간
+
+        <strong> BOOKSTORE 특별 이벤트 </strong>
+      </p>
+    </div>
+
+    <!-- =========================
+       2. 상단 서비스 메뉴
+  ========================== -->
+
+    <div class="service-bar">
+      <div class="inner">
+        <!-- 왼쪽 -->
+        <ul class="service-menu">
+          <li class="active">
+            <a href="./sub.html"> BOOKSTORE </a>
+          </li>
+
+          <li>
+            <a href="./sub.html"> eBook </a>
+          </li>
+
+          <li>
+            <a href="./sub.html"> sam </a>
+          </li>
+
+          <li>
+            <a href="./sub.html"> 굿즈 </a>
+          </li>
+
+          <li>
+            <a href="./sub.html"> 바로출판 </a>
+          </li>
+        </ul>
+
+        <!-- 오른쪽 -->
+        <ul class="member-menu">
+          <li>
+            <a href="./sub.html"> 회원가입 </a>
+          </li>
+
+          <li>
+            <a href="./sub.html"> 로그인 </a>
+          </li>
+
+          <li>
+            <a href="./sub.html"> 회원혜택 </a>
+          </li>
+
+          <li>
+            <a href="./sub.html"> 주문배송 </a>
+          </li>
+
+          <li>
+            <a href="./sub.html"> 고객센터 </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- =========================
+       3. HEADER
+  ========================== -->
+
+    <header class="header">
+      <div class="inner header-inner">
+        <!-- 로고 -->
+        <h1 class="logo">
+          <a href="./index.html">
+            <img src="./img/logo.svg" alt="BOOKSTORE" />
+          </a>
+        </h1>
+
+        <!-- 검색창 -->
+
+        <div class="search-box">
+          <select id="searchCategory">
+            <option value="all">통합검색</option>
+
+            <option value="book">국내도서</option>
+
+            <option value="foreign">외국도서</option>
+
+            <option value="ebook">eBook</option>
+          </select>
+
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="찾고 싶은 책을 검색해보세요"
+          />
+
+          <button type="button" id="searchBtn" aria-label="검색">🔍</button>
+        </div>
+
+        <!-- 오른쪽 아이콘 -->
+
+        <div class="header-icons">
+          <a href="./sub.html" class="cart-btn"> 🛒 </a>
+
+          <a href="./sub.html" class="mypage-btn"> 👤 </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- =========================
+       4. 메인 NAV
+  ========================== -->
+
+    <nav class="main-nav">
+      <div class="inner nav-inner">
+        <!-- 전체메뉴 -->
+
+        <button type="button" class="category-btn">☰</button>
+
+        <!-- 메인 메뉴 -->
+        <ul class="main-menu">
+          <li class="nav-highlight">
+            <a href="./sub.html"> 김초엽X펩톤 </a>
+          </li>
+
+          <li class="nav-highlight">
+            <a href="./sub.html"> 오디세이 </a>
+          </li>
+
+          <li>
+            <a href="./sub.html"> 베스트 </a>
+          </li>
+
+          <li>
+            <a href="./sub.html"> 이벤트 </a>
+          </li>
+
+          <li class="nav-highlight">
+            <a href="./sub.html"> 주말특가 </a>
+          </li>
+
+          <li>
+            <a href="./sub.html"> 바로펀딩 </a>
+          </li>
+
+          <li>
+            <a href="./sub.html"> 신상품 </a>
+          </li>
+
+          <li>
+            <a href="./sub.html"> PICKS </a>
+          </li>
+
+          <li>
+            <a href="./sub.html"> 컬처라운지 </a>
+          </li>
+
+          <li class="culture-plus">
+            <button type="button">+</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- =========================
+       MAIN
+  ========================== -->
+
+    <main>
+      <!-- =========================
+     5. 메인 비주얼
+  ========================== -->
+
+      <section class="main-visual">
+        <div class="inner visual-layout">
+          <!-- =====================
+     왼쪽 메인 배너
+====================== -->
+
+          <div class="main-banner">
+            <!-- 배너 1 -->
+            <div class="banner-slide banner-purple active">
+              <div class="banner-content">
+                <div class="banner-text">
+                  <span class="banner-label"> Special </span>
+
+                  <h2>
+                    오늘 만나고 싶은<br />
+                    새로운 이야기
+                  </h2>
+
+                  <p>
+                    지금 BOOKSTORE에서<br />
+                    새로운 책을 만나보세요.
+                  </p>
+                </div>
+
+                <div class="banner-book">
+                  <img class="banner-book-image" src="" alt="추천 도서" />
+                </div>
+              </div>
+            </div>
+
+            <!-- 배너 2 -->
+            <div class="banner-slide banner-green">
+              <div class="banner-content">
+                <div class="banner-text">
+                  <span class="banner-label"> New Book </span>
+
+                  <h2>
+                    지금 주목해야 할<br />
+                    새로운 책
+                  </h2>
+
+                  <p>
+                    새롭게 출간된 책을<br />
+                    가장 먼저 만나보세요.
+                  </p>
+                </div>
+
+                <div class="banner-book">
+                  <img class="banner-book-image" src="" alt="신간 도서" />
+                </div>
+              </div>
+            </div>
+
+            <!-- 배너 3 -->
+            <div class="banner-slide banner-orange">
+              <div class="banner-content">
+                <div class="banner-text">
+                  <span class="banner-label"> Bestseller </span>
+
+                  <h2>
+                    많은 독자가 선택한<br />
+                    오늘의 책
+                  </h2>
+
+                  <p>
+                    지금 가장 많은 관심을 받는<br />
+                    이야기를 만나보세요.
+                  </p>
+                </div>
+
+                <div class="banner-book">
+                  <img class="banner-book-image" src="" alt="베스트 도서" />
+                </div>
+              </div>
+            </div>
+
+            <!-- 배너 4 -->
+            <div class="banner-slide banner-blue">
+              <div class="banner-content">
+                <div class="banner-text">
+                  <span class="banner-label"> BOOKSTORE PICK </span>
+
+                  <h2>
+                    취향을 발견하는<br />
+                    특별한 한 권
+                  </h2>
+
+                  <p>
+                    BOOKSTORE가 고른<br />
+                    오늘의 추천 도서입니다.
+                  </p>
+                </div>
+
+                <div class="banner-book">
+                  <img
+                    class="banner-book-image"
+                    src=""
+                    alt="BOOKSTORE 추천 도서"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- 배너 컨트롤 -->
+            <div class="banner-controls">
+              <button type="button" id="prevBanner" aria-label="이전 배너">
+                ‹
+              </button>
+
+              <span id="bannerCurrent"> 01 </span>
+
+              <span>/</span>
+
+              <span id="bannerTotal"> 04 </span>
+
+              <button type="button" id="nextBanner" aria-label="다음 배너">
+                ›
+              </button>
+            </div>
+          </div>
+
+          <!-- =====================
+     오른쪽 특가 배너
+====================== -->
+
+          <div class="right-promo-area">
+            <!-- 오늘만 특가 -->
+            <aside class="special-card">
+              <div class="special-image">
+                <img
+                  src="./img/promo/toy-camera.jpg"
+                  alt="부이 레트로 키링 카메라"
+                />
+              </div>
+
+              <div class="special-info">
+                <span>오늘만 특가</span>
+
+                <h3>부이 레트로 키링 카메라</h3>
+
+                <strong> 오늘만 29,900원! </strong>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+     6. 바로가기 메뉴
+========================== -->
+
+      <section class="quick-menu">
+        <div class="inner quick-menu-inner">
+          <ul>
+            <li>
+              <a href="./sub.html">
+                <span>🎉</span>
+                혜택·이벤트
+              </a>
+            </li>
+
+            <li>
+              <a href="./sub.html">
+                <span>％</span>
+                오늘만특가
+              </a>
+            </li>
+
+            <li>
+              <a href="./sub.html">
+                <span>📱</span>
+                APP혜택
+              </a>
+            </li>
+
+            <li>
+              <a href="./sub.html">
+                <span>🎁</span>
+                기프트카드
+              </a>
+            </li>
+
+            <li>
+              <a href="./sub.html">
+                <span>📚</span>
+                이달의 책
+              </a>
+            </li>
+
+            <li>
+              <a href="./sub.html">
+                <span>✏️</span>
+                독서대회
+              </a>
+            </li>
+
+            <li>
+              <a href="./sub.html">
+                <span>🎀</span>
+                오늘의굿즈
+              </a>
+            </li>
+
+            <li>
+              <a href="./sub.html">
+                <span>📖</span>
+                트렌드+
+              </a>
+            </li>
+
+            <li>
+              <a href="./sub.html">
+                <span>👤</span>
+                인물&작품
+              </a>
+            </li>
+          </ul>
+
+          <!-- 인물&작품 오른쪽 미션 배너 -->
+
+          <a href="./sub.html" class="quick-mission-banner">
+            <img src="./img/promo/mission-banner.jpg" alt="미션 수행 이벤트" />
+          </a>
+        </div>
+      </section>
+
+      <!-- =========================
+         7. 오늘의 선택
+    ========================== -->
+
+      <section class="today-section">
+        <div class="inner">
+          <!-- 제목 + 탭 -->
+
+          <div class="section-title">
+            <div class="title-left">
+              <h2>오늘의 선택</h2>
+
+              <ul class="today-tabs">
+                <li class="active">
+                  <button type="button" data-query="경제 교양">추천도서</button>
+                </li>
+
+                <li>
+                  <button type="button" data-query="한국 장편소설">
+                    한국도서
+                  </button>
+                </li>
+
+                <li>
+                  <button type="button" data-query="세계 문학">외국도서</button>
+                </li>
+
+                <li>
+                  <button type="button" data-query="전자책">ebook</button>
+                </li>
+              </ul>
+            </div>
+
+            <a href="./sub.html" class="more-btn"> 더보기 + </a>
+          </div>
+
+          <!-- =====================
+             API 오늘의 선택
+        ====================== -->
+
+          <div class="today-feature" id="todayBookList">
+            <!-- 대표 책 -->
+
+            <div class="today-main-book"></div>
+
+            <!-- 오른쪽 작은 책 -->
+
+            <div class="today-side-books"></div>
+          </div>
+        </div>
+      </section>
+      <!-- =========================
+     8. MD 추천
+========================== -->
+
+      <section class="md-section">
+        <div class="inner">
+          <div class="section-title">
+            <div class="title-left">
+              <h2>MD들이 신중하게 골랐어요</h2>
+            </div>
+
+            <a href="./sub.html" class="more-btn">더보기 +</a>
+          </div>
+
+          <div class="md-book-list" id="mdBookList"></div>
+        </div>
+      </section>
+      <!-- =========================
+         9. 베스트셀러
+    ========================== -->
+
+      <section class="best-section">
+        <div class="inner">
+          <!-- 제목 + 탭 -->
+
+          <div class="best-title">
+            <div class="best-title-left">
+              <h2>베스트셀러</h2>
+
+              <ul class="best-tabs">
+                <li class="active">
+                  <button type="button" data-query="total">종합</button>
+                </li>
+
+                <li>
+                  <button type="button" data-query="korea">국내도서</button>
+                </li>
+
+                <li>
+                  <button type="button" data-query="foreign">외국도서</button>
+                </li>
+              </ul>
+            </div>
+
+            <a href="./sub.html" class="more-btn"> 더보기 + </a>
+          </div>
+
+          <!-- =====================
+            API 베스트셀러
+        ====================== -->
+
+          <div class="best-book-list" id="bestBookList"></div>
+        </div>
+      </section>
+
+      <!-- =========================
+    10. 출판사 추천
+========================== -->
+
+      <section class="publisher-section">
+        <div class="inner">
+          <div class="section-title">
+            <div class="title-left">
+              <h2>출판사에서 자신있게 추천해요</h2>
+            </div>
+
+            <a href="./sub.html" class="more-btn">더보기 +</a>
+          </div>
+
+          <div class="publisher-book-list" id="publisherBookList"></div>
+        </div>
+      </section>
+      <!-- =========================
+    11. 트렌드+ 추천
+========================== -->
+
+      <section class="trend-section">
+        <div class="inner">
+          <div class="section-title">
+            <div class="title-left">
+              <h2>트렌드+가 지금 읽을 책을 골랐어요</h2>
+            </div>
+
+            <a href="./sub.html" class="more-btn"> 더보기 + </a>
+          </div>
+
+          <!-- API로 책이 들어오는 곳 -->
+          <div class="trend-book-list" id="trendBookList"></div>
+        </div>
+      </section>
+      <!-- =========================
+     12. 베스트 랭킹
+========================== -->
+
+      <section class="ranking-section">
+        <div class="inner ranking-layout">
+          <!-- 왼쪽 메뉴 -->
+          <aside class="ranking-menu">
+            <div class="ranking-group">
+              <div class="ranking-group-title">
+                <h3>베스트</h3>
+
+                <a href="./sub.html"> 더보기 + </a>
+              </div>
+
+              <ul class="ranking-tabs">
+                <li class="active">
+                  <button type="button" data-ranking="total">전체</button>
+                </li>
+
+                <li>
+                  <button type="button" data-ranking="korea">국내도서</button>
+                </li>
+
+                <li>
+                  <button type="button" data-ranking="foreign">외국도서</button>
+                </li>
+
+                <li>
+                  <button type="button">eBook</button>
+                </li>
+
+                <li>
+                  <button type="button">sam</button>
+                </li>
+
+                <li>
+                  <button type="button">핫트랙스</button>
+                </li>
+
+                <li>
+                  <button type="button">교보only</button>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 스테디셀러 -->
+
+            <div class="ranking-group steady-group">
+              <div class="ranking-group-title">
+                <h3>스테디셀러</h3>
+              </div>
+
+              <ul class="steady-tabs">
+                <li>
+                  <button type="button">국내도서</button>
+                </li>
+
+                <li>
+                  <button type="button">외국도서</button>
+                </li>
+              </ul>
+            </div>
+          </aside>
+
+          <!-- 오른쪽 책 목록 -->
+
+          <div class="ranking-book-list" id="rankingBookList"></div>
+        </div>
+      </section>
+      <!-- =========================
+     13. CASTing
+========================== -->
+
+      <section class="casting-section">
+        <div class="inner">
+          <div class="section-title">
+            <div class="title-left">
+              <h2>CASTing</h2>
+            </div>
+
+            <a href="./sub.html" class="more-btn"> 더보기 + </a>
+          </div>
+
+          <div class="casting-list">
+            <article class="casting-card">
+              <img src="./img/casting/casting1.jpg" alt="CASTing 콘텐츠 1" />
+
+              <h3>성우와 같이 읽을까요? 오늘의 특별한 이야기</h3>
+            </article>
+
+            <article class="casting-card">
+              <img src="./img/casting/casting2.jpg" alt="CASTing 콘텐츠 2" />
+
+              <h3>큐레이터가 말해주는 관람 꿀팁과 꼭 봐야 할 이야기</h3>
+            </article>
+
+            <article class="casting-card">
+              <img src="./img/casting/casting3.jpg" alt="CASTing 콘텐츠 3" />
+
+              <h3>다른 과학에 대한 가능성 새로운 시선으로 만나보기</h3>
+            </article>
+
+            <article class="casting-card">
+              <img src="./img/casting/casting4.jpg" alt="CASTing 콘텐츠 4" />
+
+              <h3>작가와 함께 이야기하는 작품 속 세계</h3>
+            </article>
+
+            <article class="casting-card">
+              <img src="./img/casting/casting5.jpg" alt="CASTing 콘텐츠 5" />
+
+              <h3>한 장면을 가장 아름답게 기록하는 방법</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================
+     14. 이벤트 추천
+========================== -->
+
+      <section class="event-section">
+        <div class="inner">
+          <div class="event-title">
+            <div class="event-title-left">
+              <h2>이벤트의 정성이 달라요</h2>
+
+              <ul class="event-tabs">
+                <li class="active">
+                  <button type="button">BOOKSTORE</button>
+                </li>
+
+                <li>
+                  <button type="button">eBook</button>
+                </li>
+
+                <li>
+                  <button type="button">굿즈</button>
+                </li>
+              </ul>
+            </div>
+
+            <a href="./sub.html" class="more-btn"> 더보기 + </a>
+          </div>
+
+          <div class="event-card-list">
+            <a href="./sub.html" class="event-card">
+              <img src="./img/event/event1.jpg" alt="이벤트 1" />
+            </a>
+
+            <a href="./sub.html" class="event-card">
+              <img src="./img/event/event2.jpg" alt="이벤트 2" />
+            </a>
+
+            <a href="./sub.html" class="event-card">
+              <img src="./img/event/event3.jpg" alt="이벤트 3" />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- ========================================
+     FOOTER
+======================================== -->
+
+    <footer class="footer">
+      <!-- 푸터 상단 공지 -->
+      <div class="footer-notice">
+        <div class="inner footer-notice-inner">
+          <div class="notice-item">
+            <strong>공지사항</strong>
+            <a href="./sub.html"
+              >회원등급 산정 순수구매액 적용 기준 변경 안내</a
+            >
+          </div>
+
+          <div class="notice-item">
+            <strong>당첨자발표</strong>
+            <a href="./sub.html">리뷰 이벤트 당첨자 발표</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 푸터 본문 -->
+      <div class="footer-main">
+        <div class="inner footer-main-inner">
+          <!-- 왼쪽 -->
+          <div class="footer-left">
+            <a href="./index.html" class="footer-logo">
+              <img src="./img/logo.svg" alt="BOOKSTORE" />
+            </a>
+
+            <ul class="footer-menu">
+              <li><a href="./sub.html">회사소개</a></li>
+              <li><a href="./sub.html">이용약관</a></li>
+              <li>
+                <a href="./sub.html"><strong>개인정보처리방침</strong></a>
+              </li>
+              <li><a href="./sub.html">청소년보호정책</a></li>
+              <li><a href="./sub.html">대량구매서비스</a></li>
+              <li><a href="./sub.html">협력사여러분</a></li>
+              <li><a href="./sub.html">채용정보</a></li>
+              <li><a href="./sub.html">광고소개</a></li>
+            </ul>
+
+            <div class="company-info">
+              <p>
+                (주)BOOKSTORE
+                <span>|</span>
+                서울특별시 종로구
+                <span>|</span>
+                대표이사 : BOOKSTORE
+              </p>
+
+              <p>
+                사업자등록번호 : 000-00-00000
+                <span>|</span>
+                사업자정보확인
+              </p>
+
+              <p>
+                대표전화 : 1544-0000
+                <span>|</span>
+                FAX : 0000-000-0000
+              </p>
+            </div>
+
+            <p class="copyright">© BOOKSTORE</p>
+          </div>
+
+          <!-- 오른쪽 -->
+          <div class="footer-right">
+            <div class="footer-selects">
+              <select>
+                <option>Family Site</option>
+                <option>BOOKSTORE</option>
+                <option>eBook</option>
+                <option>sam</option>
+              </select>
+
+              <select>
+                <option>SNS 바로가기</option>
+                <option>Instagram</option>
+                <option>YouTube</option>
+                <option>Blog</option>
+              </select>
+            </div>
+
+            <div class="footer-service">
+              <p>
+                BOOKSTORE 고객만족서비스
+                <button type="button">서비스가입확인 ›</button>
+              </p>
+
+              <p class="service-description">
+                고객님의 안전거래를 위해 현금 등으로 결제 시<br />
+                안전한 구매안전서비스를 이용하실 수 있습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =========================
+      JavaScript
+========================== -->
+
+    <script src="./js/api.js"></script>
+
+    <script src="./js/render.js"></script>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

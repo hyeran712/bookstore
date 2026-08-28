@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>BOOKSTORE | 도서 상세</title>
+
+    <!-- 공통 CSS -->
+    <link rel="stylesheet" href="./css/common.css" />
+
+    <!-- 서브페이지 CSS -->
+    <link rel="stylesheet" href="./css/sub.css" />
+  </head>
+
+  <body>
+    <!-- ========================================
+         1. 상단 이벤트 띠배너
+    ======================================== -->
+
+    <div class="top-banner">
+      <p>
+        무엇이든 해내는 주간
+
+        <strong> BOOKSTORE 특별 이벤트 </strong>
+      </p>
+    </div>
+
+    <!-- ========================================
+         2. 상단 서비스 메뉴
+    ======================================== -->
+
+    <div class="service-bar">
+      <div class="inner">
+        <!-- 왼쪽 -->
+
+        <ul class="service-menu">
+          <li class="active">
+            <a href="./index.html"> BOOKSTORE </a>
+          </li>
+
+          <li>
+            <a href="#"> eBook </a>
+          </li>
+
+          <li>
+            <a href="#"> sam </a>
+          </li>
+
+          <li>
+            <a href="#"> 굿즈 </a>
+          </li>
+
+          <li>
+            <a href="#"> 바로출판 </a>
+          </li>
+        </ul>
+
+        <!-- 오른쪽 -->
+
+        <ul class="member-menu">
+          <li>
+            <a href="#"> 회원가입 </a>
+          </li>
+
+          <li>
+            <a href="#"> 로그인 </a>
+          </li>
+
+          <li>
+            <a href="#"> 회원혜택 </a>
+          </li>
+
+          <li>
+            <a href="#"> 주문배송 </a>
+          </li>
+
+          <li>
+            <a href="#"> 고객센터 </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ========================================
+         3. HEADER
+    ======================================== -->
+
+    <header class="header">
+      <div class="inner header-inner">
+        <!-- 로고 -->
+
+        <h1 class="logo">
+          <a href="./index.html">
+            <img src="./img/logo.svg" alt="BOOKSTORE" />
+          </a>
+        </h1>
+
+        <!-- 검색 -->
+
+        <div class="search-box">
+          <select id="searchCategory">
+            <option value="all">통합검색</option>
+
+            <option value="book">국내도서</option>
+
+            <option value="foreign">외국도서</option>
+
+            <option value="ebook">eBook</option>
+          </select>
+
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="찾고 싶은 책을 검색해보세요"
+          />
+
+          <button type="button" id="searchBtn" aria-label="검색">🔍</button>
+        </div>
+
+        <!-- 오른쪽 아이콘 -->
+
+        <div class="header-icons">
+          <a href="#" class="cart-btn"> 🛒 </a>
+
+          <a href="#" class="mypage-btn"> 👤 </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ========================================
+         4. NAV
+    ======================================== -->
+
+    <nav class="main-nav">
+      <div class="inner nav-inner">
+        <button type="button" class="category-btn">☰</button>
+
+        <ul class="main-menu">
+          <li class="nav-highlight">
+            <a href="./index.html"> 김초엽X펩톤 </a>
+          </li>
+
+          <li class="nav-highlight">
+            <a href="./index.html"> 오디세이 </a>
+          </li>
+
+          <li>
+            <a href="./index.html"> 베스트 </a>
+          </li>
+
+          <li>
+            <a href="./index.html"> 이벤트 </a>
+          </li>
+
+          <li class="nav-highlight">
+            <a href="./index.html"> 주말특가 </a>
+          </li>
+
+          <li>
+            <a href="./index.html"> 바로펀딩 </a>
+          </li>
+
+          <li>
+            <a href="./index.html"> 신상품 </a>
+          </li>
+
+          <li>
+            <a href="./index.html"> PICKS </a>
+          </li>
+
+          <li>
+            <a href="./index.html"> 컬처라운지 </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ========================================
+         MAIN
+    ======================================== -->
+
+    <main class="sub-main">
+      <!-- ========================================
+           5. 현재 위치
+      ======================================== -->
+
+      <div class="inner breadcrumb">
+        <a href="./index.html"> 홈 </a>
+
+        <span>›</span>
+
+        <a href="#"> 국내도서 </a>
+
+        <span>›</span>
+
+        <span id="breadcrumbTitle"> 도서 상세 </span>
+      </div>
+
+      <!-- ========================================
+           6. 상품 상세
+      ======================================== -->
+
+      <section class="product-detail">
+        <div class="inner product-layout">
+          <!-- ==============================
+               왼쪽 책 이미지
+          ============================== -->
+
+          <div class="product-image-area">
+            <div class="product-badge">베스트</div>
+
+            <div class="product-cover">
+              <img id="detailThumbnail" src="" alt="도서 표지" />
+            </div>
+
+            <button type="button" class="preview-btn">미리보기</button>
+          </div>
+
+          <!-- ==============================
+               가운데 책 정보
+          ============================== -->
+
+          <div class="product-info">
+            <div class="product-category">국내도서</div>
+
+            <h2 id="detailTitle">도서 정보를 불러오는 중입니다.</h2>
+
+            <p class="product-subtitle" id="detailContents"></p>
+
+            <div class="author-info">
+              <strong id="detailAuthors"> - </strong>
+
+              <span> 저자 </span>
+            </div>
+
+            <div class="publisher-info">
+              <span id="detailPublisher"> - </span>
+
+              <span class="info-divider"> | </span>
+
+              <span id="detailDate"> - </span>
+            </div>
+
+            <!-- 별점 -->
+
+            <div class="rating-area">
+              <span class="stars"> ★★★★★ </span>
+
+              <strong> 9.8 </strong>
+
+              <span class="review-count"> 리뷰 128개 </span>
+            </div>
+
+            <!-- 이벤트 -->
+
+            <div class="book-event">
+              <span class="event-label"> 이벤트 </span>
+
+              <span> BOOKSTORE 회원 특별 적립 혜택 </span>
+            </div>
+          </div>
+
+          <!-- ==============================
+               오른쪽 구매 박스
+          ============================== -->
+
+          <aside class="purchase-box">
+            <!-- 가격 -->
+
+            <div class="price-area">
+              <strong id="discountRate" class="discount-rate"> 10% </strong>
+
+              <strong id="detailPrice" class="sale-price"> 17,820원 </strong>
+
+              <del id="originalPrice" class="original-price"> 19,800원 </del>
+            </div>
+
+            <!-- 포인트 -->
+
+            <div class="purchase-row">
+              <div class="purchase-row-title">
+                통합포인트
+
+                <span class="info-icon"> › </span>
+              </div>
+
+              <div class="purchase-row-content">
+                <div>
+                  <strong id="detailPoint"> 990P </strong>
+
+                  <span> (5% 적립) </span>
+                </div>
+
+                <p>5만원 이상 구매 시 2천원 추가 적립</p>
+              </div>
+            </div>
+
+            <!-- 결제혜택 -->
+
+            <div class="purchase-row">
+              <div class="purchase-row-title">결제혜택</div>
+
+              <div class="purchase-row-content inline-content">
+                카드/간편결제 혜택을 확인해 보세요!
+
+                <span class="circle-arrow"> ↓ </span>
+              </div>
+            </div>
+
+            <!-- 배송비 -->
+
+            <div class="purchase-row">
+              <div class="purchase-row-title">
+                배송비
+
+                <span class="info-icon"> › </span>
+              </div>
+
+              <div class="purchase-row-content">
+                <strong> 무료배송 </strong>
+              </div>
+            </div>
+
+            <!-- 배송안내 -->
+
+            <div class="purchase-row delivery-row">
+              <div class="purchase-row-title">
+                배송안내
+
+                <span class="info-icon"> › </span>
+              </div>
+
+              <div class="purchase-row-content">
+                <div class="delivery-text">
+                  <span class="delivery-badge"> 새벽배송 </span>
+
+                  <strong> 내일(토) 오전 7시 전 도착 </strong>
+                </div>
+
+                <p class="login-text">
+                  <a href="#"> 로그인 후 </a>
+
+                  정확한 배송안내 받아보세요!
+                </p>
+              </div>
+            </div>
+
+            <!-- 매장재고 -->
+
+            <button type="button" class="stock-button">
+              ♧ 매장 재고 · 위치
+            </button>
+
+            <!-- 하단 옵션 -->
+
+            <div class="purchase-bottom">
+              <span>
+                · 해외배송 가능
+                <span class="info-icon"> › </span>
+              </span>
+
+              <span>
+                · 문화비소득공제 신청 가능
+                <span class="info-icon"> › </span>
+              </span>
+            </div>
+
+            <!-- 수량 -->
+
+            <div class="quantity-area">
+              <span> 수량 </span>
+
+              <div class="quantity-control">
+                <button type="button" id="minusBtn">−</button>
+
+                <span id="quantity"> 1 </span>
+
+                <button type="button" id="plusBtn">+</button>
+              </div>
+            </div>
+
+            <!-- 구매 버튼 -->
+
+            <div class="purchase-buttons">
+              <button type="button" class="cart-button" id="cartButton">
+                장바구니
+              </button>
+
+              <button type="button" class="buy-button" id="buyButton">
+                바로구매
+              </button>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ========================================
+           7. 배송 안내
+      ======================================== -->
+
+      <section class="delivery-section">
+        <div class="inner">
+          <div class="delivery-box">
+            <div>
+              <span class="delivery-title"> 배송안내 </span>
+
+              <strong> 오늘 주문하면 빠르게 받아볼 수 있어요 </strong>
+            </div>
+
+            <span class="delivery-free"> 무료배송 </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================
+           8. 상세 탭
+      ======================================== -->
+
+      <section class="detail-tabs-section">
+        <div class="inner">
+          <ul class="detail-tabs">
+            <li class="active">
+              <a href="#bookIntroduction"> 상품정보 </a>
+            </li>
+
+            <li>
+              <a href="#bookIntroduction"> 리뷰 </a>
+            </li>
+
+            <li>
+              <a href="#bookIntroduction"> 교환/반품 </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ========================================
+           9. 책 소개
+      ======================================== -->
+
+      <section class="book-introduction" id="bookIntroduction">
+        <div class="inner content-layout">
+          <!-- 책 상세내용 -->
+
+          <div class="book-content">
+            <h2>책 소개</h2>
+
+            <div class="intro-line"></div>
+
+            <p id="longDescription" class="book-description">
+              책 정보를 불러오는 중입니다.
+            </p>
+
+            <!-- ========================================
+                 기억의 무늬일 때만
+                 sub.js가 memory.jpg를 넣는 위치
+            ======================================== -->
+
+            <div id="detailImageArea" class="detail-image-area"></div>
+
+            <!-- ========================================
+                 기본 정보
+            ======================================== -->
+
+            <div class="book-basic-info">
+              <h3>기본정보</h3>
+
+              <dl>
+                <div>
+                  <dt>도서명</dt>
+
+                  <dd id="infoTitle">-</dd>
+                </div>
+
+                <div>
+                  <dt>저자</dt>
+
+                  <dd id="infoAuthors">-</dd>
+                </div>
+
+                <div>
+                  <dt>출판사</dt>
+
+                  <dd id="infoPublisher">-</dd>
+                </div>
+
+                <div>
+                  <dt>출간일</dt>
+
+                  <dd id="infoDate">-</dd>
+                </div>
+
+                <div>
+                  <dt>ISBN</dt>
+
+                  <dd id="infoIsbn">-</dd>
+                </div>
+              </dl>
+            </div>
+
+            <!-- ========================================
+                 저자 소개
+            ======================================== -->
+
+            <div class="author-section">
+              <h2>저자 소개</h2>
+
+              <div class="author-card">
+                <strong id="authorName"> 저자 </strong>
+
+                <p>BOOKSTORE에서 만나보는 이 책의 저자입니다.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 오른쪽 혜택 박스 -->
+
+          <aside class="side-info">
+            <div class="side-info-box">
+              <h3>함께 보면 좋은 혜택</h3>
+
+              <p>
+                BOOKSTORE 회원이라면<br />
+                다양한 구매 혜택을 받을 수 있어요.
+              </p>
+
+              <a href="./index.html"> 혜택 확인하기 → </a>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========================================
+         FOOTER
+    ======================================== -->
+
+    <footer class="footer">
+      <!-- 공지 -->
+
+      <div class="footer-notice">
+        <div class="inner footer-notice-inner">
+          <div class="notice-item">
+            <strong> 공지사항 </strong>
+
+            <a href="#"> 회원등급 산정 순수구매액 적용 기준 변경 안내 </a>
+          </div>
+
+          <div class="notice-item">
+            <strong> 당첨자발표 </strong>
+
+            <a href="#"> 리뷰 이벤트 당첨자 발표 </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 푸터 본문 -->
+
+      <div class="footer-main">
+        <div class="inner footer-main-inner">
+          <!-- 왼쪽 -->
+
+          <div class="footer-left">
+            <a href="./index.html" class="footer-logo">
+              <img src="./img/logo.svg" alt="BOOKSTORE" />
+            </a>
+
+            <ul class="footer-menu">
+              <li>
+                <a href="#"> 회사소개 </a>
+              </li>
+
+              <li>
+                <a href="#"> 이용약관 </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <strong> 개인정보처리방침 </strong>
+                </a>
+              </li>
+
+              <li>
+                <a href="#"> 청소년보호정책 </a>
+              </li>
+
+              <li>
+                <a href="#"> 대량구매서비스 </a>
+              </li>
+
+              <li>
+                <a href="#"> 채용정보 </a>
+              </li>
+            </ul>
+
+            <div class="company-info">
+              <p>
+                (주)BOOKSTORE
+                <span>|</span>
+                서울특별시 종로구
+                <span>|</span>
+                대표이사 : BOOKSTORE
+              </p>
+
+              <p>사업자등록번호 : 000-00-00000</p>
+
+              <p>대표전화 : 1544-0000</p>
+            </div>
+
+            <p class="copyright">© BOOKSTORE</p>
+          </div>
+
+          <!-- 오른쪽 -->
+
+          <div class="footer-right">
+            <div class="footer-selects">
+              <select>
+                <option>Family Site</option>
+
+                <option>BOOKSTORE</option>
+
+                <option>eBook</option>
+              </select>
+
+              <select>
+                <option>SNS 바로가기</option>
+
+                <option>Instagram</option>
+
+                <option>YouTube</option>
+              </select>
+            </div>
+
+            <div class="footer-service">
+              <p>BOOKSTORE 고객만족서비스</p>
+
+              <p class="service-description">
+                안전한 구매를 위해 구매안전서비스를 제공합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========================================
+         JavaScript
+    ======================================== -->
+
+    <script src="./js/api.js"></script>
+
+    <script src="./js/sub.js"></script>
+  </body>
+</html>
